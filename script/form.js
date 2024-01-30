@@ -31,7 +31,7 @@ async function sendEmailTelegram(event) {
             console.error(error + "Ошибка! Форма не отправлена")
             alert("Ошибка! Форма не отправлена")
         } finally {
-            formBtn.textContent = 'Оформить заявку'
+            formBtn.value = 'ЗАКАЗАТЬ'
         }
     }
 }
