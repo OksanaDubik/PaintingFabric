@@ -24,6 +24,7 @@ async function sendEmailTelegram(event) {
             if (response.ok) {
                 alert("Форма отправлена")
                 form.reset()
+                formBtn.value = 'ЗАКАЗАТЬ'
             } else {
                 throw new Error(response.statusText)
             }
