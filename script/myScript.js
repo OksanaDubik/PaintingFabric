@@ -98,11 +98,11 @@ images.forEach(image => {
 
 
 //удалить сообщение от PHP
-let textPhp =  document.querySelector(".textPhp")
-
-setTimeout(function (){
-    textPhp.style.display = "none"
-}, 2000)
+// let textPhp =  document.querySelector(".textPhp")
+//
+// setTimeout(function (){
+//     textPhp.style.display = "none"
+// }, 2000)
 
 
 

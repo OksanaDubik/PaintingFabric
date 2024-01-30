@@ -72,7 +72,7 @@
         <svg id="up" xmlns="http://www.w3.org/2000/svg" fill="red" class="bi bi-arrow-up-circle-fill"
              viewBox="0 0 16 16">
             <path
-                d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+                    d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
         </svg>
     </section>
     <section class="slider">
@@ -375,98 +375,26 @@
     <section class="form ">
         <div class="container">
             <h2>Закажи роспись на ткани и добавьте яркий акцент в свою жизнь!</h2>
-<!--            <?php-->
-<!--            $theme = "Новый заказ";-->
-<!--            error_reporting(E_ERROR);   //Отключение предупреждений и нотайсов (warning и notice) на сайте-->
-<!--            // создание переменных из полей формы-->
-<!--            if (isset($_POST['name1'])) {-->
-<!--                $name1 = $_POST['name1'];-->
-<!--                if ($name1 == '') {-->
-<!--                    unset($name1);-->
-<!--                }-->
-<!--            }-->
-<!--            if (isset($_POST['email1'])) {-->
-<!--                $email1 = $_POST['email1'];-->
-<!--                if ($email1 == '') {-->
-<!--                    unset($email1);-->
-<!--                }-->
-<!--            }-->
-<!--            if (isset($_POST['text'])) {-->
-<!--                $text = $_POST['text'];-->
-<!--                if ($text == '') {-->
-<!--                    unset($text);-->
-<!--                }-->
-<!--            }-->
-<!--            if (isset($_POST['sab'])) {-->
-<!--                $sab = $_POST['sab'];-->
-<!--                if ($sab == '') {-->
-<!--                    unset($sab);-->
-<!--                }-->
-<!--            }-->
 
-<!--            //стирание треугольных скобок из полей формы-->
-<!--            /* комментарий */-->
-<!--            if (isset($name1)) {-->
-<!--                $name1 = stripslashes($name1);-->
-<!--                $name1 = htmlspecialchars($name1);-->
-<!--            }-->
-<!--            if (isset($email1)) {-->
-<!--                $email1 = stripslashes($email1);-->
-<!--                $email1 = htmlspecialchars($email1);-->
-<!--            }-->
-<!--            if (isset($text)) {-->
-<!--                $text = stripslashes($text);-->
-<!--                $text = htmlspecialchars($text);-->
-<!--            }-->
-<!--            // адрес почты куда придет письмо-->
-<!--            $address = "OksanaDubikW@yandex.ru";-->
+            <form action="#" method="post" name="f1" enctype="multipart/form-data" onsubmit="sendEmailTelegram(event)">
 
-<!--            // текст письма-->
-<!--            $note_text = "-->
-<!--    Тема : $theme \r\n-->
-<!--    Имя : $name1 \r\n-->
-<!--    Email : $email1 \r\n-->
-<!--       Дополнительная информация : $text";-->
-<!--            if (isset($name1) && isset ($sab)) {-->
-<!--                mail($address, $theme, $note_text, "Content-type:text/plain; windows-1251");-->
-
-<!--                $text = "<div class = 'textPhp'  style=' background-color: #ddddfa;-->
-<!--                width: 100%;-->
-<!--                text-align: center;-->
-<!--                padding: 40px'><p style='font-size:25px;'>-->
-<!--                    Уважаемый(ая)-->
-<!--                    <b style='font-size:25px;'>-->
-<!--                        $name1-->
-<!--                    </b>-->
-<!--                    Ваше письмо отправленно успешно. <br>-->
-<!--                    Спасибо. <br>-->
-<!--                    Вам скоро ответят на почту <b style='font-size:25px;'>-->
-<!--                    $email1</b>.-->
-<!--                </p>-->
-<!--                </div>";-->
-<!--                echo  $text;-->
-
-<!--            }-->
-<!--            ?>-->
-            <form action="1956.php" method="post" name="f1" enctype="multipart/form-data">
                 <p><a name="forma"></a></p>
                 <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1">@</span>
+
                     <input type="text" class="form-control" placeholder="Ваше имя" name="name1" required=""
                            aria-label="Username" aria-describedby="basic-addon1">
                 </div>
                 <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">@</span>
                     <input type="email" class="form-control" placeholder="Ваш email" aria-label="Username" name="email1"
                            required="required">
                 </div>
                 <div class="textar input-group mb-3">
-                    <span class="input-group-text">Дополнительные детали</span>
-                    <textarea class="form-control" aria-label="With textarea" name="text"></textarea>
+                    <span class="input-group-text">Опишите Ваши пожелания</span>
+                    <textarea class="form-control" aria-label="With textarea" name="textar" required></textarea>
                 </div>
-
-                <input class="btn btn-secondary" type="submit" value="ЗАКАЗАТЬ" name="sab">
+                <input id="tg" class="btn btn-secondary" type="submit" value="ЗАКАЗАТЬ" name="sab">
                 <input class="btn btn-secondary" type="reset" value="ОЧИСТИТЬ" name="cli">
-
 
             </form>
         </div>
@@ -476,8 +404,7 @@
 <footer>
     <div class="footer container">
 
-        <p>По вопросам, связанным с заказами, звоните
-            по телефону 1-888-878-3227.
+        <p>Вопросы, связанные с заказами, отправляйте по адресу <a href="https://t.me/ApplicationSite">t.me/ApplicationSite</a>
         </p>
         <p>Мы не занимаемся продажей или арендой
             одежды. Все работы подлежат предварительному согласованию с заказчиком.
@@ -485,11 +412,13 @@
 
 
         <p><a href="#"> &#169; Данный сайт является
-                интеллектуальной собственностью</a></p>
+            интеллектуальной собственностью</a></p>
     </div>
 
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="script/myScript.js"></script>
+<script src="script/form.js"></script>
 </body>
 </html>
