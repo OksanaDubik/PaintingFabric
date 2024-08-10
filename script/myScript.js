@@ -41,68 +41,13 @@ function topFunction() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
-
+topFunction()
 
 //анимация стрелки над формой
 setTimeout(function () {
     document.querySelector(".bi").classList.add('slide-bottom')
 }, 5000)
 
-
-
-//увеличение слайдов
-let images = document.querySelectorAll(".d-block")
-
-function handleImage(event) {
-    let srcImage = event.target.src
-    if(window.innerWidth < 769){
-            Object.assign(document.querySelector('.modl').style, {
-            display : 'block',
-            width: '100vw',
-            height: '200vh',
-            position: 'relative',
-            zIndex: '10',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: '150%',
-            background: `url("${srcImage}") no-repeat`,
-            top: `-100vh`,
-            left: `0`
-        });
-    }else {
-
-
-    Object.assign(document.querySelector('.modl').style, {
-        display : 'block',
-        width: '100vw',
-        height: '200vh',
-        position: 'relative',
-        zIndex: '10',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: '150%',
-        background: `url("${srcImage}") no-repeat`,
-        top: `-100vh`,
-        left: `20vw`
-    });
-}
-    let getModal = document.querySelector(".modl")
-    getModal.addEventListener("click", function () {
-        getModal.style.display = "none"
-    })
-
-}
-
-images.forEach(image => {
-    image.addEventListener("click", handleImage)
-})
-
-
-
-//удалить сообщение от PHP
-// let textPhp =  document.querySelector(".textPhp")
-//
-// setTimeout(function (){
-//     textPhp.style.display = "none"
-// }, 2000)
 
 
 

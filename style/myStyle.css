@@ -100,6 +100,7 @@ header ul li a:hover {
     font-weight: 500;
     line-height: 2;
     transform: translateX(-200vw);
+    font-size: 45px;
 }
 
 /*анимация текста*/
@@ -228,6 +229,7 @@ url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1
     padding: 7vh 33vw 15vh;
     background: rgba(47, 46, 46, 1);
     align-items: center;
+
 }
 
 .d-block:hover {
@@ -236,6 +238,14 @@ url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1
 
 .background-carousel img {
     width: 100%;
+    transition: transform 0.5s;
+}
+
+.background-carousel img:hover {
+    transform: scale(2);
+    position: relative;
+    z-index: 10;
+    padding-bottom: 200px;
 }
 
 .carousel-caption h5 {
@@ -324,7 +334,7 @@ url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1
 }
 
 form {
-    max-width: 30vw !important;
+    max-width: 35vw !important;
     margin: 50px auto 10vh;
 }
 
@@ -380,6 +390,7 @@ footer {
     .slider h2 {
         padding: 5vh 8vw;
     }
+
 }
 
 @media screen and (992px >= width > 285px) {
@@ -394,7 +405,12 @@ footer {
     .top {
         background: url(../images/top/abstract.jpg) 0 4vh/154% no-repeat;
     }
-
+    .form .btn {
+        margin-top: 40px;
+    }
+    .background-carousel img:hover {
+        transform: scale(3);
+    }
 }
 
 @media screen and ( max-width: 768px) {
@@ -402,7 +418,7 @@ footer {
         font-size: 75px;
     }
 
-    h2 {
+    h2, #five {
         font-size: 28px;
     }
 
@@ -566,6 +582,9 @@ footer {
     .video__content {
         height: 84vh;
     }
+    h2, #five {
+        font-size: 20px;
+    }
 
 }
 
@@ -591,7 +610,6 @@ footer {
     header {
         height: 74vh;
     }
-
 
     img, svg {
         max-width: 90%;
